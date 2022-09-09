@@ -1,0 +1,106 @@
+{
+	"id": "ba0162ea-cc33-4d34-88ec-34ca7bec6f30",
+	"name": "Projeto acesso hunter",
+	"timestamp": "2022-09-09T17:01:55.495Z",
+	"collection_id": "21024745-96ab5831-5563-4979-b961-6f930dee68fa",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5a50faaf-4ea2-4716-b1a7-e4b135883cde",
+			"name": "Pesquisa de domínio",
+			"url": "https://api.hunter.io/v2/domain-search?domain=stripe.com&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+			"time": 431,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				431
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "15bac9ab-ceb7-4821-aa01-6fa2104127db",
+			"name": "Localizador de e-mail",
+			"url": "https://api.hunter.io/v2/email-finder?domain=reddit.com&first_name=Alexis&last_name=Ohanian&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+			"time": 977,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				977
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "df32ec4a-e31a-414a-b641-ab9904af477f",
+			"name": "Localizador de Autores",
+			"url": "https://api.hunter.io/v2/author-finder?url=https://hunter.io/blog/how-to-know-if-someone-read-your-email/&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+			"time": 1430,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1430
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3a4855da-a92a-451c-92fd-f61d46ae4478",
+			"name": "Verificação de e-mail",
+			"url": "https://api.hunter.io/v2/email-verifier?email=patrick@stripe.com&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+			"time": 446,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				446
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3284,
+	"collection": {
+		"requests": [
+			{
+				"id": "5a50faaf-4ea2-4716-b1a7-e4b135883cde",
+				"method": "GET"
+			},
+			{
+				"id": "15bac9ab-ceb7-4821-aa01-6fa2104127db",
+				"method": "GET"
+			},
+			{
+				"id": "df32ec4a-e31a-414a-b641-ab9904af477f",
+				"method": "GET"
+			},
+			{
+				"id": "3a4855da-a92a-451c-92fd-f61d46ae4478",
+				"method": "GET"
+			}
+		]
+	}
+}
