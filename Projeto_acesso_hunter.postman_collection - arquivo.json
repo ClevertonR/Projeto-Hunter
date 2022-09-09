@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "96ab5831-5563-4979-b961-6f930dee68fa",
+		"name": "Projeto acesso hunter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21024745"
+	},
+	"item": [
+		{
+			"name": "Pesquisa de domínio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cb407478ccf60e7fbf0953b0a602e46a67fc5332970a1058be1041b5c72050b1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hunter.io/v2/domain-search?domain=stripe.com&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hunter",
+						"io"
+					],
+					"path": [
+						"v2",
+						"domain-search"
+					],
+					"query": [
+						{
+							"key": "domain",
+							"value": "stripe.com"
+						},
+						{
+							"key": "api_key",
+							"value": "7d29331f5cb794342d01892660ca7c1c3d585220"
+						}
+					]
+				},
+				"description": "Requisição de usuários - https://gorest.co.in/public-api"
+			},
+			"response": []
+		},
+		{
+			"name": "Localizador de e-mail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "7d29331f5cb794342d01892660ca7c1c3d585220",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hunter.io/v2/email-finder?domain=reddit.com&first_name=Alexis&last_name=Ohanian&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hunter",
+						"io"
+					],
+					"path": [
+						"v2",
+						"email-finder"
+					],
+					"query": [
+						{
+							"key": "domain",
+							"value": "reddit.com"
+						},
+						{
+							"key": "first_name",
+							"value": "Alexis"
+						},
+						{
+							"key": "last_name",
+							"value": "Ohanian"
+						},
+						{
+							"key": "api_key",
+							"value": "7d29331f5cb794342d01892660ca7c1c3d585220"
+						}
+					]
+				},
+				"description": "criação de usuário POST"
+			},
+			"response": []
+		},
+		{
+			"name": "Localizador de Autores",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cb407478ccf60e7fbf0953b0a602e46a67fc5332970a1058be1041b5c72050b1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hunter.io/v2/author-finder?url=https://hunter.io/blog/how-to-know-if-someone-read-your-email/&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hunter",
+						"io"
+					],
+					"path": [
+						"v2",
+						"author-finder"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://hunter.io/blog/how-to-know-if-someone-read-your-email/"
+						},
+						{
+							"key": "api_key",
+							"value": "7d29331f5cb794342d01892660ca7c1c3d585220"
+						}
+					]
+				},
+				"description": "DELETA COMENTARIOS\r\n\r\nhttps://gorest.co.in/public/v2/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "Verificação de e-mail",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.variables.set(\"nome_pessoa\",\"Atmanand\");\r",
+							"pm.variables.set(\"genero\",\"male\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "cb407478ccf60e7fbf0953b0a602e46a67fc5332970a1058be1041b5c72050b1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.hunter.io/v2/email-verifier?email=patrick@stripe.com&api_key=7d29331f5cb794342d01892660ca7c1c3d585220",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hunter",
+						"io"
+					],
+					"path": [
+						"v2",
+						"email-verifier"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "patrick@stripe.com"
+						},
+						{
+							"key": "api_key",
+							"value": "7d29331f5cb794342d01892660ca7c1c3d585220"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "7d29331f5cb794342d01892660ca7c1c3d585220",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"script executado na requisicao\");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
